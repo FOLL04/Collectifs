@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --color-notwhite: hsl(240, 78%, 98%);
+  --color-muted: hsl(234, 14%, 74%);
+  --color-foreground: hsl(233, 13%, 49%);
+  --color-foreground-dark: hsl(232, 13%, 33%);
+  --color-accent: hsl(237, 63%, 64%);
+--size-button-boder-width: 1px;
+  --size-bg-top-width: 375px;
+  --size-card-border-radius: 12px;
+  --size-card-padding: 30px;
+  --size-card-highlight-offset: 24px;
+  --size-toggle-thumb: 24px;
+  --size-toggle-padding: 4px;
+  --size-toggle-label-padding: 24px;
+  --size-toggle-width: calc(
+    var(--size-toggle-thumb) * 2 + var(--size-toggle-padding) * 2
+  ); } 
+
+  .container {
+  width: 500px;
+  padding: 70px 24px;
+  margin-left: auto;
+  margin-right: auto; }
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+  body {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-foreground);
+  background-color: var(--color-notwhite);
+  background-repeat: no-repeat;
+  background-position: calc(100% + (var(--size-bg-top-width) / 2)) 0%;
+  background-image: url(Img/imgbg-top.svg); }
+
+  
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem; }
+
+h3 {
+  color: var(--color-foreground-dark);
+  letter-spacing: -0.03em; }
+
+  
+
+     .pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 700px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+} 
