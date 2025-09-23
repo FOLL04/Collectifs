@@ -1,20 +1,30 @@
-   const toggle = document.getElementById("toggle");
-  const prices = document.querySelectorAll(".js-price-card__price");
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("toggle");
 
-  toggle.addEventListener("change", () => {
-    if (toggle.checked) {
-      // Mode mensuel
-      prices[0].style.display = "block";
-      prices[1].style.display = "none";
-    } else {
-      // Mode annuel
-      prices[0].style.display = "none";
-      prices[1].style.display = "block";
-    }
-  });
+    // Sélectionne tous les éléments de prix mensuels et annuels
+    const priceElements = document.querySelectorAll(".js-price-card__price");
 
-  // Affiche le prix mensuel par défaut au chargement
-  window.addEventListener("DOMContentLoaded", () => {
-    prices[0].style.display = "block";
-    prices[1].style.display = "none";
-  });
+    toggle.addEventListener("change", function () {
+        priceElements.forEach((priceElement, index) => {
+            // Affiche un sur deux selon l'état du toggle
+            if (toggle.checked) {
+                // Mode mensuel : afficher le premier prix
+                if (index % 2 === 0) {
+                    priceElement.style.display = "block";
+                } else {
+                    priceElement.style.display = "none";
+                }
+            } else {
+                // Mode annuel : afficher le deuxième prix
+                if (index % 2 === 0) {
+                    priceElement.style.display = "none";
+                } else {
+                    priceElement.style.display = "block";
+                }
+            }
+        });
+    });
+
+    // Initialisation : afficher les prix mensuels par défaut
+    toggle.dispatchEvent(new Event("change"));
+});
