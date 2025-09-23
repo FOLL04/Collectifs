@@ -9,6 +9,8 @@
 </head>
 <body>
 <main class="container">
+
+    
         
       <h1>Nos tarifs</h1>
       <div class="toggle">
@@ -19,8 +21,12 @@
         </label>
         <span>Mensuel</span>
       </div>
+    
 
       <!-- MA PARTIE ISIDORE -->
+   
+      <section class="Jobs">
+      <div class="one">
 
       <div class="grid">
       <section class="price-card">
@@ -41,12 +47,17 @@
             <a class="button" href="#">APPRENDRE PLUS</a>
         </section>
     </div>
+    </div>
 
+
+    <div class="two">
     <div class="hervé">
-        <section class="carte_de_prix">
-       <h2 class="nom_de_carte">Professional</h2>
-       <h3 class="prix_de_carte"><span class="dollar">$</span>24.99</h3>
-       <h3 class="prix_de_carte js" hidden><span class="dollar_1">$</span>249.99</h3>
+        <section class="price-card" id="carte_de_prix">
+       <h2 class="price-card__name" id="nom_de_carte">Professional</h2>
+       <h3 class="price-card__price js-price-card__price" id="prix_de_carte">
+        <span class="dollar">$</span>24.99</h3>
+       <h3 class="price-card__price js-price-card__price"  style="display: none;" >
+        <span class="price-card__dollar">$</span>249.99</h3>
 
        <ul class="liste_de_carde">
         <li>1 TB Storage</li>
@@ -54,13 +65,15 @@
         <li>Send up to 10 GB</li>
        </ul>
 
-       <a class="btn_de_carte" href="#">LEARN MORE</a>
+       <a class="button2" href="#">APPRENDRE PLUS</a>
 
     </section>
+    </div>
     </div>
 
         <!-- MA PARTIE JOSUE -->
 
+        <div class="tree">
     <div class="grid">
       <section class="price-card">
             <h2 class="price-card__name">Master</h2>
@@ -68,7 +81,7 @@
                 <span class="price-card__dollar">$</span>
                 39,99
             </h3>
-            <h3 class="price-card__price js-price-card__price" hidden>
+            <h3 class="price-card__price js-price-card__price" style="display: none;">
                 <span class="price-card__dollar">$</span>
                 399,99
             </h3>
@@ -80,6 +93,8 @@
             <a class="button" href="#">APPRENDRE PLUS</a>
         </section>
     </div>
+    </div>
+    </section>
 </main>
 <script src="script.js"></script>
 </body>
